@@ -1,0 +1,18 @@
+{{my_name}}
+
+
+{% for cat in catergory %}
+    {{cat.cat_name}}
+
+    {% for pro in cat.product_set.all %}
+
+        {{pro.product_name}}
+    
+
+    
+    
+    {% endfor %}
+
+
+
+{% endfor %}
