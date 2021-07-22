@@ -15,11 +15,11 @@ class HomeView(TemplateView):
 
 
 class productView(TemplateView):
-    template_name= 'product.html'
+    template_name='product.html'
 
     def get_context_data(self, **kwargs):
         contex= super().get_context_data(**kwargs)
-        contex['product']=product.object.all()
+        contex['product']=product.objects.all()
         return contex
     
 
