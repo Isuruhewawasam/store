@@ -4,8 +4,8 @@ from.models import *
 
 # Create your views here.
 
-class HomeView(TemplateView):
-    template_name = 'home.html'
+class catView(TemplateView):
+    template_name = 'catergory.html'
 
     def get_context_data(self, **kwargs):
         contex= super().get_context_data(**kwargs)
@@ -15,7 +15,7 @@ class HomeView(TemplateView):
 
 
 class productView(TemplateView):
-    template_name='index.html'
+    template_name='product.html'
 
     def get_context_data(self, **kwargs):
         contex= super().get_context_data(**kwargs)
