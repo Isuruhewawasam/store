@@ -1,0 +1,24 @@
+{% for cat in catergory %}
+
+	<h2 class="text-center mt-2">{{cat.cat_name}}</h2>
+	<hr>
+	<div class ="row mt-3">
+
+		{% for x in cat.product_set.all %}
+		
+		
+		<div class ="col-md-4 mt-3">
+			 
+		  	<a href=""><h2 class="text-danger text-start">{{x.product_name}}</a></h2>
+			<img src= "{{x.product_image.url}}" alt="" width="250" height="250"></br>
+			
+			
+		  </div>
+		
+		{% endfor %}
+		</div>
+{% endfor %}
+
+</div>
+
+{% endblock body %}
